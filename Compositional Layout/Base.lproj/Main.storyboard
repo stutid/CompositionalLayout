@@ -72,6 +72,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="PZx-Nt-61c"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="U9W-OP-HsP"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

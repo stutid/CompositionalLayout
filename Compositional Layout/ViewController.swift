@@ -14,6 +14,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Food Delivery"
+        collectionView.collectionViewLayout = createLayout()
+    }
+
+    private func createLayout() -> UICollectionViewLayout {
+        let size = NSCollectionLayoutSize(widthDimension: .absolute(300.0), heightDimension: .absolute(140.0))
+        let item = NSCollectionLayoutItem(layoutSize: size)
+        item.contentInsets.bottom = 10
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        let compLayout = UICollectionViewCompositionalLayout(section: section)
+        return compLayout
     }
 }
 
@@ -23,6 +34,8 @@ extension ViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodItemCollectionViewCell", for: indexPath) as? FoodItemCollectionViewCell else { return UICollectionViewCell() }
+        cell.backgroundColor = .systemPink
+        return cell
     }
 }

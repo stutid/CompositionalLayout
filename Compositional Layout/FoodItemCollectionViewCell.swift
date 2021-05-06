@@ -13,4 +13,9 @@ class FoodItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelSubtitle: UILabel!
     @IBOutlet weak var imageView: UIImageView!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        imageView.backgroundColor = .yellow
+    }
+
 }
