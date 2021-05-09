@@ -10,10 +10,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    private let headerKind = "headerKind"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Food Delivery"
+        collectionView.register(HeaderCollectionReusableView.self,
+                                forSupplementaryViewOfKind: headerKind,
+                                withReuseIdentifier: "HeaderCollectionReusableView")
         collectionView.collectionViewLayout = createLayout()
     }
 
@@ -26,6 +30,7 @@ class ViewController: UIViewController {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
+        section.boundarySupplementaryItems = [.init(layoutSize: size, elementKind: headerKind, alignment: .topLeading)]
         let compLayout = UICollectionViewCompositionalLayout(section: section)
         return compLayout
     }
@@ -45,5 +50,13 @@ extension ViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodItemCollectionViewCell", for: indexPath) as? FoodItemCollectionViewCell else { return UICollectionViewCell() }
         cell.backgroundColor = .systemPink
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                     withReuseIdentifier: "HeaderCollectionReusableView",
+                                                                     for: indexPath) as? HeaderCollectionReusableView else { return UICollectionReusableView() }
+        header.backgroundColor = .blue
+        return header
     }
 }
