@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F2F166A264438FD007FC226 /* FoodItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F1669264438FD007FC226 /* FoodItemCollectionViewCell.swift */; };
-		8F2F166D26445541007FC226 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F166C26445540007FC226 /* HeaderCollectionViewCell.swift */; };
 		8F9AC6BD261F55400092EDA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9AC6BC261F55400092EDA6 /* AppDelegate.swift */; };
 		8F9AC6BF261F55400092EDA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9AC6BE261F55400092EDA6 /* SceneDelegate.swift */; };
 		8F9AC6C1261F55400092EDA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9AC6C0261F55400092EDA6 /* ViewController.swift */; };
@@ -18,8 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8F2F1669264438FD007FC226 /* FoodItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		8F2F166C26445540007FC226 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F9AC6B9261F55400092EDA6 /* Compositional Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Compositional Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9AC6BC261F55400092EDA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F9AC6BE261F55400092EDA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,8 +59,6 @@
 				8F9AC6BC261F55400092EDA6 /* AppDelegate.swift */,
 				8F9AC6BE261F55400092EDA6 /* SceneDelegate.swift */,
 				8F9AC6C0261F55400092EDA6 /* ViewController.swift */,
-				8F2F1669264438FD007FC226 /* FoodItemCollectionViewCell.swift */,
-				8F2F166C26445540007FC226 /* HeaderCollectionViewCell.swift */,
 				8F9AC6C2261F55400092EDA6 /* Main.storyboard */,
 				8F9AC6C5261F55420092EDA6 /* Assets.xcassets */,
 				8F9AC6C7261F55420092EDA6 /* LaunchScreen.storyboard */,
@@ -145,8 +139,6 @@
 			files = (
 				8F9AC6C1261F55400092EDA6 /* ViewController.swift in Sources */,
 				8F9AC6BD261F55400092EDA6 /* AppDelegate.swift in Sources */,
-				8F2F166D26445541007FC226 /* HeaderCollectionViewCell.swift in Sources */,
-				8F2F166A264438FD007FC226 /* FoodItemCollectionViewCell.swift in Sources */,
 				8F9AC6BF261F55400092EDA6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,18 +11,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     private let headerKind = "headerKind"
+    private let headerReuseIdentifier = "HeaderCollectionReusableView"
+    private let cellReuseIdentifier = "FoodItemCollectionViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Food Delivery"
-        collectionView.register(HeaderCollectionReusableView.self,
+        collectionView.register(UICollectionReusableView.self,
                                 forSupplementaryViewOfKind: headerKind,
-                                withReuseIdentifier: "HeaderCollectionReusableView")
+                                withReuseIdentifier: headerReuseIdentifier)
         collectionView.collectionViewLayout = createLayout()
     }
 
     private func createLayout() -> UICollectionViewLayout {
-        let size = NSCollectionLayoutSize(widthDimension: .absolute(300.0), heightDimension: .absolute(140.0))
+        let size = NSCollectionLayoutSize(widthDimension: .absolute(150.0), heightDimension: .absolute(150.0))
 
         // Item
         let item = NSCollectionLayoutItem(layoutSize: size)
@@ -59,15 +60,15 @@ extension ViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodItemCollectionViewCell", for: indexPath) as? FoodItemCollectionViewCell else { return UICollectionViewCell() }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath)
         cell.backgroundColor = .systemBlue
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                           withReuseIdentifier: "HeaderCollectionReusableView",
-                                                                           for: indexPath) as? HeaderCollectionReusableView else { return UICollectionReusableView() }
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                     withReuseIdentifier: headerReuseIdentifier,
+                                                                     for: indexPath)
         header.backgroundColor = .darkGray
         return header
     }
