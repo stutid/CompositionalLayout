@@ -19,7 +19,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        labelHeader.frame = CGRect(x: 15, y: 15, width: 300, height: 40)
+        labelHeader.frame = CGRect(x: 15, y: 0, width: 300, height: 40)
     }
 
     required init?(coder: NSCoder) {

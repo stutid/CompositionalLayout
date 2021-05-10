@@ -23,14 +23,26 @@ class ViewController: UIViewController {
 
     private func createLayout() -> UICollectionViewLayout {
         let size = NSCollectionLayoutSize(widthDimension: .absolute(300.0), heightDimension: .absolute(140.0))
+
+        // Item
         let item = NSCollectionLayoutItem(layoutSize: size)
-        item.contentInsets.top = 5
         item.contentInsets.leading = 5
         item.contentInsets.trailing = 1
+
+        // Group
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
+
+        // Section
         let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets.top = 5
+        section.contentInsets.bottom = 5
         section.orthogonalScrollingBehavior = .continuous
-        section.boundarySupplementaryItems = [.init(layoutSize: size, elementKind: headerKind, alignment: .topLeading)]
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(40.0))
+        section.boundarySupplementaryItems = [.init(layoutSize: headerSize,
+                                                    elementKind: headerKind,
+                                                    alignment: .topLeading)]
+
+        // Layout
         let compLayout = UICollectionViewCompositionalLayout(section: section)
         return compLayout
     }
@@ -48,15 +60,15 @@ extension ViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodItemCollectionViewCell", for: indexPath) as? FoodItemCollectionViewCell else { return UICollectionViewCell() }
-        cell.backgroundColor = .systemPink
+        cell.backgroundColor = .systemBlue
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                     withReuseIdentifier: "HeaderCollectionReusableView",
-                                                                     for: indexPath) as? HeaderCollectionReusableView else { return UICollectionReusableView() }
-        header.backgroundColor = .blue
+                                                                           withReuseIdentifier: "HeaderCollectionReusableView",
+                                                                           for: indexPath) as? HeaderCollectionReusableView else { return UICollectionReusableView() }
+        header.backgroundColor = .darkGray
         return header
     }
 }
