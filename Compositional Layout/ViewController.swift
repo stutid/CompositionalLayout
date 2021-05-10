@@ -22,8 +22,15 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout = createLayout()
     }
 
+    private func randomColor() -> UIColor {
+        UIColor(red: .random(in: 0...1),
+                green: .random(in: 0...1),
+                blue: .random(in: 0...1),
+                alpha: 1.0)
+    }
+
     private func createLayout() -> UICollectionViewLayout {
-        let size = NSCollectionLayoutSize(widthDimension: .absolute(150.0), heightDimension: .absolute(150.0))
+        let size = NSCollectionLayoutSize(widthDimension: .absolute(250.0), heightDimension: .absolute(150.0))
 
         // Item
         let item = NSCollectionLayoutItem(layoutSize: size)
@@ -35,10 +42,13 @@ class ViewController: UIViewController {
 
         // Section
         let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets.leading = 5
         section.contentInsets.top = 5
         section.contentInsets.bottom = 5
         section.orthogonalScrollingBehavior = .continuous
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(40.0))
+
+        // Header in section
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .absolute(40.0))
         section.boundarySupplementaryItems = [.init(layoutSize: headerSize,
                                                     elementKind: headerKind,
                                                     alignment: .topLeading)]
@@ -52,7 +62,7 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        3
+        5
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -61,7 +71,8 @@ extension ViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath)
-        cell.backgroundColor = .systemBlue
+        cell.backgroundColor = randomColor()
+        cell.layer.cornerRadius = 5.0
         return cell
     }
 
@@ -70,6 +81,7 @@ extension ViewController: UICollectionViewDataSource {
                                                                      withReuseIdentifier: headerReuseIdentifier,
                                                                      for: indexPath)
         header.backgroundColor = .darkGray
+        header.layer.cornerRadius = 5.0
         return header
     }
 }
