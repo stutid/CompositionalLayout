@@ -30,12 +30,11 @@ class ViewController: UIViewController {
     }
 
     private func createLayout() -> UICollectionViewLayout {
-        let size = NSCollectionLayoutSize(widthDimension: .absolute(250.0), heightDimension: .absolute(150.0))
+        let size = NSCollectionLayoutSize(widthDimension: .absolute(250.0), heightDimension: .estimated(150.0))
 
         // Item
         let item = NSCollectionLayoutItem(layoutSize: size)
-        item.contentInsets.leading = 5
-        item.contentInsets.trailing = 1
+        item.contentInsets.trailing = 3
 
         // Group
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
@@ -66,7 +65,7 @@ extension ViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        8
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
