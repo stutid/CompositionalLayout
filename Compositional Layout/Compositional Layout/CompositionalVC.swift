@@ -9,11 +9,13 @@ import UIKit
 
 class CompositionalVC: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     private let headerKind = "headerKind"
     private let headerReuseIdentifier = "HeaderCollectionReusableView"
     private let cellReuseIdentifier = "FoodItemCollectionViewCell"
 
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Compositional Layout"
@@ -60,6 +62,7 @@ class CompositionalVC: UIViewController {
 
 }
 
+// MARK: CollectionView data source
 extension CompositionalVC: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {

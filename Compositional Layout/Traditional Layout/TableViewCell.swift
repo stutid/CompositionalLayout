@@ -9,14 +9,16 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    // MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // MARK: Methods
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
 }
 
+// MARK: Collection view data source and delegate
 extension TableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,5 +35,4 @@ extension TableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 250, height: 150)
     }
-
 }

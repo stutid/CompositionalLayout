@@ -9,15 +9,17 @@ import UIKit
 
 class TraditionalVC: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
 
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Traditional Layout"
     }
-
 }
 
+// MARK: TableView data source and delegate
 extension TraditionalVC: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,5 +52,4 @@ extension TraditionalVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         40
     }
-
 }

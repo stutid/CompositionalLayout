@@ -9,9 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var buttonComp: UIButton!
     @IBOutlet weak var buttonTrad: UIButton!
 
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonComp.layer.cornerRadius = 5.0
