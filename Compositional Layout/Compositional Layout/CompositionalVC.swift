@@ -82,7 +82,6 @@ extension CompositionalVC: UICollectionViewDataSource {
                                                                      withReuseIdentifier: headerReuseIdentifier,
                                                                      for: indexPath)
         header.backgroundColor = .darkGray
-        header.layer.cornerRadius = 5.0
         return header
     }
 }
