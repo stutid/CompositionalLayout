@@ -17,7 +17,7 @@ class TableViewCell: UITableViewCell {
 
 }
 
-extension TableViewCell: UICollectionViewDataSource {
+extension TableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         8
@@ -28,6 +28,10 @@ extension TableViewCell: UICollectionViewDataSource {
         else { return UICollectionViewCell() }
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: 250, height: 150)
     }
 
 }

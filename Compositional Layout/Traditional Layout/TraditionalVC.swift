@@ -18,10 +18,10 @@ class TraditionalVC: UIViewController {
 
 }
 
-extension TraditionalVC: UITableViewDataSource {
+extension TraditionalVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        8
+        5
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -29,6 +29,10 @@ extension TraditionalVC: UITableViewDataSource {
         else { return UITableViewCell() }
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        160
     }
 
 }

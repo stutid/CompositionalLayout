@@ -69,19 +69,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5gd-Cs-NsV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5gd-Cs-NsV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="tHg-fG-49n">
+                                    <rect key="frame" x="0.0" y="233.00000034679067" width="414" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="184" id="wXX-0p-uFM" customClass="TableViewCell" customModule="Compositional_Layout" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="184" id="wXX-0p-uFM" customClass="TableViewCell" customModule="Compositional_Layout" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wXX-0p-uFM" id="DVZ-4c-DQy">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="miD-FT-Ddf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="miD-FT-Ddf">
+                                                    <rect key="frame" x="5" y="5" width="404" height="174"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GNs-QV-rr3">
                                                         <size key="itemSize" width="128" height="128"/>
@@ -91,7 +96,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="o9q-Tp-kpo" customClass="CollectionViewCell" customModule="Compositional_Layout" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="28" width="128" height="128"/>
+                                                            <rect key="frame" x="0.0" y="23" width="128" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kFj-u2-LhQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -106,10 +111,10 @@
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="miD-FT-Ddf" secondAttribute="bottom" id="FJc-WE-Dl0"/>
-                                                <constraint firstAttribute="trailing" secondItem="miD-FT-Ddf" secondAttribute="trailing" id="Vdt-eG-kSR"/>
-                                                <constraint firstItem="miD-FT-Ddf" firstAttribute="leading" secondItem="DVZ-4c-DQy" secondAttribute="leading" id="nTo-2e-FX1"/>
-                                                <constraint firstItem="miD-FT-Ddf" firstAttribute="top" secondItem="DVZ-4c-DQy" secondAttribute="top" id="vTD-v1-xNa"/>
+                                                <constraint firstAttribute="bottom" secondItem="miD-FT-Ddf" secondAttribute="bottom" constant="5" id="FJc-WE-Dl0"/>
+                                                <constraint firstAttribute="trailing" secondItem="miD-FT-Ddf" secondAttribute="trailing" constant="5" id="Vdt-eG-kSR"/>
+                                                <constraint firstItem="miD-FT-Ddf" firstAttribute="leading" secondItem="DVZ-4c-DQy" secondAttribute="leading" constant="5" id="nTo-2e-FX1"/>
+                                                <constraint firstItem="miD-FT-Ddf" firstAttribute="top" secondItem="DVZ-4c-DQy" secondAttribute="top" constant="5" id="vTD-v1-xNa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -167,7 +172,7 @@
                                         <rect key="frame" x="0.0" y="120" width="374" height="80"/>
                                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal" title="Navigate to Traditional Approach">
+                                        <state key="normal" title="Navigate to Traditional Layout">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
