@@ -16,7 +16,6 @@
 		8FA50B8E26691FEB00EEC8A9 /* CompositionalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA50B8D26691FEB00EEC8A9 /* CompositionalVC.swift */; };
 		8FA50B902669274600EEC8A9 /* TraditionalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA50B8F2669274600EEC8A9 /* TraditionalVC.swift */; };
 		8FA50B922669307900EEC8A9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA50B912669307900EEC8A9 /* TableViewCell.swift */; };
-		8FA50B942669318B00EEC8A9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA50B932669318B00EEC8A9 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		8FA50B8D26691FEB00EEC8A9 /* CompositionalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalVC.swift; sourceTree = "<group>"; };
 		8FA50B8F2669274600EEC8A9 /* TraditionalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraditionalVC.swift; sourceTree = "<group>"; };
 		8FA50B912669307900EEC8A9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		8FA50B932669318B00EEC8A9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +88,6 @@
 			children = (
 				8FA50B8F2669274600EEC8A9 /* TraditionalVC.swift */,
 				8FA50B912669307900EEC8A9 /* TableViewCell.swift */,
-				8FA50B932669318B00EEC8A9 /* CollectionViewCell.swift */,
 			);
 			path = "Traditional Layout";
 			sourceTree = "<group>";
@@ -168,7 +165,6 @@
 				8F9AC6C1261F55400092EDA6 /* ViewController.swift in Sources */,
 				8F9AC6BD261F55400092EDA6 /* AppDelegate.swift in Sources */,
 				8FA50B8E26691FEB00EEC8A9 /* CompositionalVC.swift in Sources */,
-				8FA50B942669318B00EEC8A9 /* CollectionViewCell.swift in Sources */,
 				8FA50B922669307900EEC8A9 /* TableViewCell.swift in Sources */,
 				8F9AC6BF261F55400092EDA6 /* SceneDelegate.swift in Sources */,
 				8FA50B902669274600EEC8A9 /* TraditionalVC.swift in Sources */,

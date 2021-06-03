@@ -16,6 +16,13 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+
+    private func randomColor() -> UIColor {
+        UIColor(red: .random(in: 0...1),
+                green: .random(in: 0...1),
+                blue: .random(in: 0...1),
+                alpha: 1.0)
+    }
 }
 
 // MARK: Collection view data source and delegate
@@ -26,9 +33,9 @@ extension TableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlo
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell
-        else { return UICollectionViewCell() }
-
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath)
+        cell.backgroundColor = randomColor()
+        cell.layer.cornerRadius = 5.0
         return cell
     }
 
