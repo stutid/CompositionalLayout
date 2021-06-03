@@ -16,6 +16,7 @@ class CompositionalVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Compositional Layout"
         collectionView.register(UICollectionReusableView.self,
                                 forSupplementaryViewOfKind: headerKind,
                                 withReuseIdentifier: headerReuseIdentifier)

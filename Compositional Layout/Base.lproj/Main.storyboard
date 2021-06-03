@@ -12,13 +12,13 @@
         <!--CompositionalVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CompositionalVC" customModule="Compositional_Layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompositionalVC" id="BYZ-38-t0r" customClass="CompositionalVC" customModule="Compositional_Layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-ja-gcW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Obs-Nw-fFw">
                                     <size key="itemSize" width="285" height="156"/>
@@ -47,7 +47,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eYa-ja-gcW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T1X-cq-xGa"/>
-                            <constraint firstItem="eYa-ja-gcW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l2c-Xm-jWH"/>
+                            <constraint firstItem="eYa-ja-gcW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="l2c-Xm-jWH"/>
                             <constraint firstAttribute="bottom" secondItem="eYa-ja-gcW" secondAttribute="bottom" id="pKI-4F-bny"/>
                             <constraint firstItem="eYa-ja-gcW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rlm-zG-VVX"/>
                         </constraints>
@@ -139,10 +139,16 @@
         <!--Navigation Controller-->
         <scene sceneID="M8x-3p-ZlN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="SXb-Hf-v41" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SXb-Hf-v41" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bBM-6q-vrW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.5" green="0.13606448640645913" blue="0.30138418524471744" alpha="0.36992973681317259" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonCompClicked(_ sender: UIButton) {
-        
+       let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompositionalVC")
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func buttonTradClicked(_ sender: UIButton) {
